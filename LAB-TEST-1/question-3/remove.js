@@ -8,7 +8,7 @@ const removeLogFiles = () => {
 
     fs.readdir(dir, (err, files) => {
         // if folder doesnt exist or any other errors print error message 
-        if (err) console.error(`error with ${dir} directory`)
+        if (err) console.error(`error occured with ${dir} directory`)
         else {
             for (let file of files) {
                 // remove files from the given directory
