@@ -4,7 +4,7 @@
 const mixedArray = ['PIZZA', 10, true, 25, false, "wings"]
 
 let lowerCaseWords = (ary) => {
-    // promise that will be resolved when all words are  filtered and lowercase
+    // creta a promise that will be resolved when all words are  filtered and lowercase
     let pr = new Promise((resolve, reject) => {
         //filtering array and mapping to lower case
         let result = ary.filter(e => typeof e === 'string' && e !== '').map(word => word.toLowerCase())
@@ -22,8 +22,8 @@ let lowerCaseWords = (ary) => {
 
 lowerCaseWords(mixedArray).then((success) => { // when the promise is resolved return the result.
     return JSON.stringify(success)
-}).then((response) => { // runs when the promise is rejected and receives the error
+}).then((response) => { 
     console.log(response)
-}).catch((error) => {
+}).catch((error) => { // runs when the promise is rejected and receives the error
     console.log(error)
 })
